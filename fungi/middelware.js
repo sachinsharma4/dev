@@ -7,7 +7,8 @@ import * as Mongoose from "mongoose";
 
      
     }
-  await Mongoose.connect('mongodb+srv://sachin:1234@cluster0.mwypuml.mongodb.net/test').catch(err => console.log(err));
+    
+  await Mongoose.connect('mongodb+srv://sachin:1234@cluster0.mwypuml.mongodb.net/fungus').catch(err => console.log(err));
   console.log("Mongoose Connection Established");
 
  
