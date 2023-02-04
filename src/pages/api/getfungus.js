@@ -1,4 +1,4 @@
-import { Schema, model, connect } from 'mongoose';
+import * as mongoose from 'mongoose';
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import Fungi from 'fungi/fungischema';
 import connectdb from 'fungi/middelware';

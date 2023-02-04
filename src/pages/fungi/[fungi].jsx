@@ -2,7 +2,7 @@
 import React ,{useEffect,useState} from "react";
 import Head from 'next/head'
 import Image from 'next/image'
-const Fungi = (props)=>{
+ const Fungi = (props)=>{
     const [Fungi,setFungi]=useState(
       {common_name: "",
 fungi: "",
@@ -113,3 +113,4 @@ export const getServerSideProps = async (context) => {
      props: { data}, // will be passed to the page component as props
    }
  }
+ export default Fungi;
