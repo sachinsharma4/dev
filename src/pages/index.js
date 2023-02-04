@@ -48,7 +48,7 @@ const inter = Inter({ subsets: ['latin'] })
           <h1 className='pt-32'>KMCEDOF</h1>
           <span className=''>A Database of Fungi by Kirori Mal College</span>
           {/*created a search box todo implement image and voice search */}
-          <form action={`https://dev-jfztdio2b-sachinsharma4.vercel.app/${value}`} method="post" className='flex justify-center'>
+          <form action={`https://dev-jfztdio2b-sachinsharma4.vercel.app/fungi/${value}`} method="post" className='flex justify-center'>
             <input value={value} list="fungi" onChange={(e) => setvalue(e.target.value)} placeholder={placeholder} className='rounded-full w-8/12 p-2 mb-1 text-black outline-none' />{/*<BiMicrophone  className='text-blue-900  -translate-x-14 my-3'/><BiCamera className='text-blue-900  -translate-x-12 my-3'/>*/}</form>
           <datalist id='fungi'>
             {
