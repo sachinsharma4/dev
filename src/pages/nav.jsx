@@ -4,7 +4,7 @@ import {AiOutlineClose} from 'react-icons/ai';
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../../public/logo.png'
-function Nav() {
+export default function Nav() {
     const side = useRef();
     const hi=()=>{side.current.classList.contains("hidden")?side.current.classList.remove("hidden"):side.current.classList.add("hidden")}
     
