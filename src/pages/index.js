@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
-import { BiMicrophone, BiCamera } from 'react-icons/bi';
+import { BiMicrophone, BiSearch } from 'react-icons/bi';
 import React, { useState} from 'react'
 //import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
@@ -56,8 +56,8 @@ const inter = Inter({ subsets: ['latin'] })
           <h1 className='pt-32'>KMCEDOF</h1>
           <span className=''>A Database of Fungi by Kirori Mal College</span>
           {/*created a search box todo implement image and voice search */}
-          <form action={`https://dev-puce.vercel.app/fungi/${value}`} method="post" className='flex justify-center'>
-            <input value={value} list="fungi" onChange={(e) => setvalue(e.target.value)} placeholder={placeholder} className='rounded-full w-8/12 p-2 mb-1 text-black outline-none' /><BiMicrophone onClick={record}  className='text-blue-900  -translate-x-14 my-3'/>{/*<BiCamera className='text-blue-900  -translate-x-12 my-3'/>*/}</form>
+          <form id="fungi-form" action={`https://dev-puce.vercel.app/fungi/${value}`} method="post" className='flex justify-center'>
+            <input value={value} list="fungi" onChange={(e) => setvalue(e.target.value)} placeholder={placeholder} className='rounded-full w-8/12 p-2  mb-1 text-black outline-none' required/><BiMicrophone onClick={record}  className='text-blue-900  -translate-x-20 my-3'/><button type="submit" form="fungi-form" ><BiSearch className='text-blue-900  -translate-x-16 my-3'/></button></form>
           <datalist id='fungi'>
             {
               Fungi.map((item) => {
