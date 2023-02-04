@@ -85,7 +85,7 @@ KMCEDOF <br/>
       )
 }
 export const getServerSideProps = async (context) => {
- let data=await fetch(`http://192.168.0.139:3000/api/getfungus`)
+ let data=await fetch("https://dev-jfztdio2b-sachinsharma4.vercel.app/api/getfungus")
  .then(
     data => { return data.json() })
   return {
