@@ -85,7 +85,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 
         </main>
-        <footer className='w-full bg-purple-500 text-center bottom-0 text-white'>
+        <footer className='w-full bg-purple-500 text-center  text-white'>
 KMCEDOF <br/>
 <div className='-translate-x-7'>follow us on:</div> 
         </footer>
