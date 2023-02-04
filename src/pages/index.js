@@ -90,5 +90,5 @@ export const getServerSideProps = async (context) => {
     data => { return data.json() })
   return {
     props: { data}, // will be passed to the page component as props
-  }*/
+  }*/ 
 }
