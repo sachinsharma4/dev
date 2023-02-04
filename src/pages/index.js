@@ -23,14 +23,14 @@ const inter = Inter({ subsets: ['latin'] })
       const [Fungi,setFungi]=useState(props.data);
       const [placeholder,setplaceholder]=useState("enter the name fungi");
 
-    const record = ()=>{ setplaceholder("listening");
+    const record = ()=>{ setplaceholder("listening...");
     var recognition = new webkitSpeechRecognition();
     recognition.lang = "en-US";
     recognition.onresult = function(event) {
       setvalue(event.results[0][0].transcript);}
     recognition.onerror = function(error) {
       console.log("recording fail because "+error)
-      setvalue("Enter the name of fungi");}
+      setvalue("");}
       recognition.start();
     
     
@@ -57,7 +57,7 @@ const inter = Inter({ subsets: ['latin'] })
           <span className=''>A Database of Fungi by Kirori Mal College</span>
           {/*created a search box todo implement image and voice search */}
           <form id="fungi-form" action={`https://dev-puce.vercel.app/fungi/${value}`} method="post" className='flex justify-center '>
-            <input value={value} list="fungi" onChange={(e) => setvalue(e.target.value)} placeholder={placeholder} className='rounded-full w-full lg:w-3/4 p-2 ml-6  mb-1 text-black outline-none' required/><BiMicrophone onClick={record}  className='text-blue-900  -translate-x-20 my-3'/><button type="submit" form="fungi-form" ><BiSearch className='text-blue-900  -translate-x-16 my-3'/></button></form>
+            <input value={value} list="fungi" onChange={(e) => setvalue(e.target.value)} placeholder={placeholder} className='rounded-full w-full lg:w-3/4 p-2 ml-6  mb-1 text-black outline-none' required/><button><BiMicrophone onClick={record}  className='text-blue-900  -translate-x-20 my-3'/></button><button type="submit" form="fungi-form" ><BiSearch className='text-blue-900  -translate-x-16 my-3'/></button></form>
           <datalist id='fungi'>
             {
               Fungi.map((item) => {
@@ -71,8 +71,8 @@ const inter = Inter({ subsets: ['latin'] })
           {
             Fungi.map((item) => {
               return (
-                <div key={item.fungi} className='border-2   h-48 lg:h-52 rounded-xl w-5/12 lg:w-3/12 p-2 m-2'>
-                  <Link href={"./fungi/" + item.fungi}> <Image src={`/${item.fungi}/image_1.jpeg`} alt={item.fungi}  width={200} height={160} className='  bg-purple-200' />
+                <div key={item.fungi} className='border-2   min-h-fit  rounded-xl w-fit p-2 m-2'>
+                  <Link href={"./fungi/" + item.fungi}> <Image src={`/${item.fungi}/image_1.jpeg`} alt={item.fungi}  width={300} height={100} className='  bg-purple-200' />
                     <span className='font-bold italic'>{item.fungi}</span>
                     <p className=' line-clamp-2 lg:line-clamp-3 italic'>
                       {item.fungi}
@@ -85,7 +85,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 
         </main>
-        <footer className=' bg-purple-500 text-center pt-4 text-white'>
+        <footer className='w-full bg-purple-500 text-center bottom-0 text-white'>
 KMCEDOF <br/>
 <div className='-translate-x-7'>follow us on:</div> 
         </footer>
