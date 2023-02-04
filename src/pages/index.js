@@ -72,7 +72,7 @@ const inter = Inter({ subsets: ['latin'] })
             Fungi.map((item) => {
               return (
                 <div key={item.fungi} className='border-2   h-48 lg:h-52 rounded-xl w-5/12 lg:w-3/12 p-2 m-2'>
-                  <Link href={"./fungi/" + item.fungi}> <Image src="/pleurotous/image_1.jpeg" alt={item.fungi}  width={200} height={160} className='  bg-purple-200' />
+                  <Link href={"./fungi/" + item.fungi}> <Image src={`/${item.fungi}/image_1.jpeg`} alt={item.fungi}  width={200} height={160} className='  bg-purple-200' />
                     <span className='font-bold italic'>{item.fungi}</span>
                     <p className=' line-clamp-2 lg:line-clamp-3 italic'>
                       {item.fungi}
