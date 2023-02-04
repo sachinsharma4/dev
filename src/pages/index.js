@@ -29,7 +29,12 @@ const inter = Inter({ subsets: ['latin'] })
     recognition.onresult = function(event) {
       setvalue(event.results[0][0].transcript);}
     recognition.onerror = function(error) {
-      setvalue("Enter the name of fungi");}}
+      console.log("recording fail because "+error)
+      setvalue("Enter the name of fungi");}
+      recognition.start();
+    
+    
+};
     
        
          
