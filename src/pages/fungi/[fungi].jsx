@@ -106,7 +106,7 @@ return(
 }
 export const getServerSideProps = async (context) => {
   const {fungi}=context.query;
-  let data=await fetch(`https://dev-jfztdio2b-sachinsharma4.vercel.app/api/getfungus?fungi=${fungi}`).then(
+  let data=await fetch(`https://dev-puce.vercel.app/api/getfungus?fungi=${fungi}`).then(
      data => { return data.json() })
      data=data[0];
    return {
