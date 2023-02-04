@@ -9,7 +9,7 @@ export default function Nav() {
     const hi=()=>{side.current.classList.contains("hidden")?side.current.classList.remove("hidden"):side.current.classList.add("hidden")}
     
   return (<>
-    <div ref={side} onClick={hi}  className="hidden  text-white h-screen fixed w-36 p-3 bg-purple-600">
+    <div ref={side} onClick={hi}  className="hidden z-10 text-white h-screen fixed w-36 p-3 bg-purple-600">
     <AiOutlineClose className='absolute right-3  '  />
       <ul className='my-4 text-lg' >
    <li><Link href="./">home</Link></li>
