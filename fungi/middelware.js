@@ -8,7 +8,7 @@ import * as Mongoose from "mongoose";
      
     }
     
-  await Mongoose.connect(Process.env.MONGO_URI).catch(err => console.log(err));
+  await Mongoose.connect(process.env.MONGO_URI).catch(err => console.log(err));
   console.log("Mongoose Connection Established");
 
  
