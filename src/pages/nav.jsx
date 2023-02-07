@@ -10,7 +10,7 @@ export default function Nav() {
     
   return (<>
     <div ref={side} onClick={hi}  className="hidden z-10 text-white h-screen fixed w-36 p-3 bg-purple-600">
-    <AiOutlineClose className='absolute right-3  '  />
+    <AiOutlineClose className='absolute right-3'  />
       <ul className='my-4 text-lg' >
    <li><Link href="./">home</Link></li>
    <li><Link href="./about">About</Link></li>
