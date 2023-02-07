@@ -21,37 +21,39 @@ export default function Home() {
   const [text,settext]=useState(true)
   return (<>
     <form method='post' action='./api/addfungus' className='flex-col content-center p-7 bg-gray-300'  >
+   
+    <label>kingdom</label>
+    <input name='kingdom'placeholder='Enter the kingdom' className='border-2 w-4/5 block' required/>
+    <label>phylum</label>
+    <input name='phylum' placeholder='Enter the phylum' className='border-2 w-4/5 block' required/>
+    <label>class</label>
+    <input name='class' placeholder='Enter the class' className='border-2 w-4/5 block' required/>
+    <label>order</label>
+    <input name='order'placeholder='Enter the order' className='border-2 w-4/5 block' required/>
+    <label>family</label>
+    <input name='family' placeholder='Enter the family' className='border-2 w-4/5 block' required/>
+    <label>genus</label>
     <label>common name</label>
     <input name='common_name' placeholder='Enter common name' className='border-2 w-4/5 block' required/>
-    <label>fungi</label>
-    <input name='fungi' value={value.toLowerCase()} onChange={(e) => setvalue(e.target.value)} placeholder='Enter common name' className='border-2 w-4/5 block' required/>
+    
+    <input name='genus' placeholder='Enter the genus' className='border-2 w-4/5 block' required/>
     <label>description</label>
-    <textarea name='desc' placeholder='hi' className='border-2 w-4/5 block my-3' required/>
-    <label>kingdom</label>
-    <input name='kingdom'placeholder='kingdom' className='border-2 w-4/5 block' required/>
-    <label>phylum</label>
-    <input name='phylum' placeholder='hi' className='border-2 w-4/5 block' required/>
-    <label>class</label>
-    <input name='class' placeholder='hi' className='border-2 w-4/5 block' required/>
-    <label>order</label>
-    <input name='order'placeholder='hi' className='border-2 w-4/5 block' required/>
-    <label>family</label>
-    <input name='family' placeholder='hi' className='border-2 w-4/5 block' required/>
-    <label>genus</label>
-    <input name='genus' placeholder='hi' className='border-2 w-4/5 block' required/>
+    <textarea name='desc' placeholder='Enter the description' className='border-2 w-4/5 block my-3' required/>
     <label>benifits</label>
-    <textarea name='benifits' placeholder='hi' className='border-2 w-4/5 block' required/>
+    <textarea name='benifits' placeholder='Enter the benifits of fungi' className='border-2 w-4/5 block' required/>
     <label>how to cultivate</label>
-    <textarea name='how_to_cultivate'placeholder='hi' className='border-2 w-4/5 block' required/>
+    <textarea name='how_to_cultivate'placeholder='Enter protocol to cultivate this fungi' className='border-2 w-4/5 block' required/>
     <label>disease</label>
-    <textarea name='disease' placeholder='hi' className='border-2 w-4/5 block my-3' required/>
+    <textarea name='disease' placeholder='Enter diseases' className='border-2 w-4/5 block my-3' required/>
     <label>prcaution</label>
-    <textarea name='prcaution' placeholder='hi' className='border-2 w-4/5 block my-3' required/>
+    <textarea name='precaution' placeholder='Enter precautions' className='border-2 w-4/5 block my-3' required/>
+    <label>fungi</label>
+    <input name='fungi' value={value.toLowerCase()} onChange={(e) => setvalue(e.target.value)} placeholder='Enter unique name used for search' className='border-2 w-4/5 block' required/>
     <label>Admin Name</label>
-    <input name='Admin_Name' placeholder='hi' className='border-2 w-4/5 block' required/>
+    <input name='Admin_Name' placeholder='Enter your name' className='border-2 w-4/5 block' required/>
     <label>password</label><br/>
-    <input name='password' type={text?'password':"text"} placeholder='hi' className='border-2 w-4/5 ' />{text?<AiFillEye onClick={()=>settext(!text)} className="text-blue-400 inline -translate-x-7"/>:<AiFillEyeInvisible onClick={()=>settext(!text)} className="text-blue-400 inline -translate-x-7"/>}
-    <br/><input type="submit" className='border-2 w-32 bg-purple-500 text-white m-3 rounded-xl' />
+    <input name='password' type={text?'password':"text"} placeholder='Enter password' className='border-2 w-4/5 ' />{text?<AiFillEye onClick={()=>settext(!text)} className="text-blue-400 inline -translate-x-7"/>:<AiFillEyeInvisible onClick={()=>settext(!text)} className="text-blue-400 inline -translate-x-7"/>}<br/>
+    <input type="submit" className='border-2 w-32 bg-purple-500 text-white m-3 rounded-xl' />
     </form>
 </> )
    

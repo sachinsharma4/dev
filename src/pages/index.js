@@ -27,7 +27,8 @@ const inter = Inter({ subsets: ['latin'] })
     var recognition = new webkitSpeechRecognition();
     recognition.lang = "en-US";
     recognition.onresult = function(event) {
-      setvalue(event.results[0][0].transcript);}
+      setvalue(event.results[0][0].transcript);
+      setplaceholder("enter the name fungi");}
     recognition.onerror = function(error) {
       console.log("recording fail because "+error)
       setvalue("");}
