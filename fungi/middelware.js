@@ -8,7 +8,7 @@ import * as Mongoose from "mongoose";
      
     }
     
-  await Mongoose.connect('mongodb+srv://sachin:1234@cluster0.mwypuml.mongodb.net/fungus').catch(err => console.log(err));
+  await Mongoose.connect(Process.MONGO_URI).catch(err => console.log(err));
   console.log("Mongoose Connection Established");
 
  
