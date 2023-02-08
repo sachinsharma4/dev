@@ -52,7 +52,7 @@ export default function Home() {
     <label>Admin Name</label>
     <input name='Admin_Name' placeholder='Enter your name' className='border-2 w-4/5 block' required/>
     <label>password</label><br/>
-    <input name='password' type={text?'password':"text"} placeholder='Enter password' className='border-2 w-4/5 ' />{text?<AiFillEye onClick={()=>settext(!text)} className="text-blue-400 inline -translate-x-7"/>:<AiFillEyeInvisible onClick={()=>settext(!text)} className="text-blue-400 inline -translate-x-7"/>}<br/>
+    <input name='password' type={text?'password':"text"} placeholder='Enter password' className='border-2 w-4/5 ' required/>{text?<AiFillEye onClick={()=>settext(!text)} className="text-blue-400 inline -translate-x-7"/>:<AiFillEyeInvisible onClick={()=>settext(!text)} className="text-blue-400 inline -translate-x-7"/>}<br/>
     <input type="submit" className='border-2 w-32 bg-purple-500 text-white m-3 rounded-xl' />
     </form>
 </> )
