@@ -53,7 +53,7 @@ return(
      
 
     </div>
-    <div className="flex max-w-full   lg:w-2/5   lg:flex-col lg:min-h-screen lg:absolute lg:right-0 lg:items-center lg:p-4 ">
+    <div className="flex max-w-full overflow-x-auto  lg:w-2/5   lg:flex-col lg:min-h-screen lg:absolute lg:right-0 lg:items-center lg:p-4 ">
  
  <Image src={`/${Fungi.fungi}/image_1.jpeg`} width={200} height={160} alt="image-1" className='m-2' />
  <Image src={`/${Fungi.fungi}/image_2.jpeg`} width={200} height={160} alt="image-2" className='m-2' />
