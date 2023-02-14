@@ -10,6 +10,7 @@ export default async function handler(req,res) {
    
 if (req.method == "POST") {
     await connectdb();
+    let admins = await Admin.find();
     let admin = await Admin.findOne({ "name": req.body.admin_name }).catch((err) => res.status(400).json({ err }));
     if (admin) {
         if (req.body.password == admin.password) {
@@ -35,7 +36,7 @@ if (req.method == "POST") {
         }
         else { res.status(500).json({ "Fatal Error": "wrong password" }) }
     }
-    res.status(404).json({ "Error": "" })
+    res.status(404).json({ "Error": admins })
 }
     else {
         res.status(400).json({ name: "bad req" })
