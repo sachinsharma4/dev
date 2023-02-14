@@ -8,17 +8,16 @@ import Image from 'next/image'
 fungi: "",
 kingdom: " ",
 phylum: "",
+desc:"",
 class: "",
 order: "",
 family: "",
 genus: "",
 benifits: "",
 how_to_cultivate: "",
-video_tutorial: "",
-image_coursol: "",
 precautions: "",
 disease: "",
-treatment: "",
+
 
 });
    // const router =  useRouter();
@@ -69,11 +68,15 @@ return(
      </div>*/}
 
  </div>
-
+ <div className="max-w-full lg:max-w-lg">
+    <h2  className="font-bold  my-4">Introduction</h2>
+    <div dangerouslySetInnerHTML={{__html:Fungi.desc}}></div>
+    </div>
     <div className="max-w-full lg:max-w-lg">
     <h2  className="font-bold  my-4">Benefits</h2>
     <div dangerouslySetInnerHTML={{__html:Fungi.benifits}}></div>
     </div>
+  
 
     <div className="how_to_cultivate max-w-full lg:max-w-lg">
     <h2 className="font-bold my-4">how to cultivate</h2>
