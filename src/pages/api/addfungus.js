@@ -10,7 +10,7 @@ export default async function handler(req,res) {
    
 if (req.method == "POST") {
     await connectdb();
-    let admin = await Admin.findOne({ "name": req.body.Admin_Name }).catch((err) => res.status(400).json({ err }));
+    let admin = await Admin.findOne({ "name": req.body.admin_name }).catch((err) => res.status(400).json({ err }));
     if (admin) {
         if (req.body.password == admin.password) {
             let p = new Fungi({
