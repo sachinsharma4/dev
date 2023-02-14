@@ -35,7 +35,7 @@ if (req.method == "POST") {
         }
         else { res.status(500).json({ "Fatal Error": "wrong password" }) }
     }
-    res.status(404).json({ "Error": req.body.name })
+    res.status(404).json({ "Error": "" })
 }
     else {
         res.status(400).json({ name: "bad req" })
