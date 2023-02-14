@@ -36,7 +36,7 @@ if (req.method == "POST") {
         }
         else { res.status(500).json({ "Fatal Error": "wrong password" }) }
     }
-    res.status(404).json({ "Error": admins })
+   else{res.status(404).json({ "Error": "Admin not found" });} 
 }
     else {
         res.status(400).json({ name: "bad req" })
