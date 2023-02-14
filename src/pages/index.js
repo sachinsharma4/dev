@@ -72,11 +72,11 @@ const inter = Inter({ subsets: ['latin'] })
           {
             Fungi.slice(0,5).map((item) => {
               return (
-                <div key={item.fungi} className='border-2   min-h-fit  rounded-xl w-fit p-2 m-2'>
-                  <Link href={"./fungi/" + item.fungi}> <Image src={`/${item.fungi}/image_1.jpeg`} alt={item.fungi}  width={300} height={100} className='  bg-purple-200' />
+                <div key={item.fungi} className='border-2 min-h-fit   rounded-xl w-80 p-2 m-2'>
+                  <Link href={"./fungi/" + item.fungi} > <Image src={`/${item.fungi}/image_1.jpeg`} alt={item.fungi}  width={300} height={100}   />
                     <span className='font-bold italic'>{item.fungi}</span>
                     <p className=' line-clamp-2 lg:line-clamp-3 italic'>
-                      {item.fungi}
+                      {item.desc==undefined?"":item.desc.slice(0,85)+"..."}
                     </p></Link>
                 </div>)
             })
@@ -86,7 +86,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 
         </main>
-        <footer className='w-full bg-purple-500 text-center  text-white'>
+        <footer className='w-full bg-purple-500 text-center relative  text-white'>
 KMCEDOF <br/>
 <div className='-translate-x-7'>follow us on:</div> 
         </footer>
