@@ -33,10 +33,9 @@ export default function Home() {
     <label>family</label>
     <input name='family' placeholder='Enter the family' className='border-2 w-4/5 block' required/>
     <label>genus</label>
-   
-    <input name='common_name' placeholder='Enter common name' className='border-2 w-4/5 block' required/>
-    <label>common name</label>
     <input name='genus' placeholder='Enter the genus' className='border-2 w-4/5 block' required/>
+    <label>common name</label>
+    <input name='common_name' placeholder='Enter common name' className='border-2 w-4/5 block' required/>
     <label>description</label>
     <textarea name='desc' placeholder='Enter the description' className='border-2 w-4/5 block my-3' required/>
     <label>benifits</label>
